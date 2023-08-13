@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Roll Dice</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function start(){
+                let btn = document.getElementById("rolldicebtn");
+                btn.addEventListener("click",rollDice,false);
+            }
+            function rollDice(){
+                let faceDie1 = Math.floor(1+Math.random()*6);
+                let image1 = document.getElementById("die1");
+                image1.setAttribute("src","die"+faceDie1+".png");
+                image1.setAttribute("alt","Die with "+faceDie1+" spot(s)");
+                
+                let faceDie2 = Math.floor(1+Math.random()*6);
+                let image2 = document.getElementById("die2");
+                image2.setAttribute("src","die"+faceDie2+".png");
+                image2.setAttribute("alt","Die with "+faceDie2+" spot(s)");
+                
+                let faceDie3 = Math.floor(1+Math.random()*6);
+                let image3 = document.getElementById("die3");
+                image3.setAttribute("src","die"+faceDie3+".png");
+                image3.setAttribute("alt","Die with "+faceDie3+" spot(s)");
+                
+                let faceDie4 = Math.floor(1+Math.random()*6);
+                let image4 = document.getElementById("die4");
+                image4.setAttribute("src","die"+faceDie4+".png");
+                image4.setAttribute("alt","Die with "+faceDie4+" spot(s)");
+                
+                
+            }
+            window.addEventListener("load",start,false);
+        </script>
+    </head>
+    <body>
+        <form>
+            <input type="button" value="Roll Dice" id="rolldicebtn" 
+                   style="width:220px;height:100px;font-size:20pt;font-weight:bolder; margin:20px; border-radius:20px;">
+        </form>
+        
+        <p>
+            <img src="die0.png" width="200" height="200" alt="Void die" id="die1" style="margin-left:20px;">
+            <img src="die0.png" width="200" height="200" alt="Void die" id="die2" style="margin-left:20px;">
+            <img src="die0.png" width="200" height="200" alt="Void die" id="die3" style="margin-left:20px;">
+            <img src="die0.png" width="200" height="200" alt="Void die" id="die4" style="margin-left:20px;">
+        </p>
+        
+    </body>
+</html>
